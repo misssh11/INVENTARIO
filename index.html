@@ -82,7 +82,10 @@
 
 <!-- SCRIPT -->
 <script>
-const API = "http://localhost:3000";
+fetch('https://inventario-e40f.onrender.com/inventario')
+    .then(res => res.json())
+    .then(data => console.log('Inventario:', data))
+    .catch(err => console.error('Error inventario:', err));
 let adminToken = null;
 
 // ADMIN FUNCTIONS
